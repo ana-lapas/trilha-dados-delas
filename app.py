@@ -63,7 +63,7 @@ Este é o seu espaço seguro para começar. Aqui você encontra recursos gratuit
 
 # --- BASE DE DADOS ---
 dados = {
-    'Plataforma': ['FGV', 'FGV', 'Data Science Academy', 'Santander Open Academy', 'Cisco Networking Academy', 'UFMS', 'FGV EMAp'],
+    'Plataforma': ['FGV', 'FGV', 'DSA', 'Santander', 'Cisco', 'UFMS', 'FGV EMAp'],
     'Curso': [
         'Introdução à Ciência de Dados (60h)',
         'SQL - Structured Query Language',
