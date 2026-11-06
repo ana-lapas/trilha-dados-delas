@@ -101,8 +101,7 @@ df_filtrado = df[df['Foco'].isin(filtro_foco)]
 # --- MÉTRICAS (KPIs) ---
 col1, col2, col3 = st.columns(3)
 col1.metric("Recursos Gratuitos", len(df_filtrado))
-col2.metric("Plataformas Parceiras", df_filtrado['Plataforma'].nunique())
-col3.metric("Opções de Carreira", "2")
+col2.metric("Plataformas Sugeridas", df_filtrado['Plataforma'].nunique())
 
 # --- GRÁFICO ---
 st.markdown("### Distribuição por Plataforma")
