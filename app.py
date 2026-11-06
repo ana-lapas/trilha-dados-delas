@@ -99,7 +99,7 @@ filtro_foco = st.sidebar.multiselect(
 df_filtrado = df[df['Foco'].isin(filtro_foco)]
 
 # --- MÉTRICAS (KPIs) ---
-col1, col2 = st.columns(3)
+col1, col2 = st.columns(2)
 col1.metric("Recursos Gratuitos", len(df_filtrado))
 col2.metric("Plataformas Sugeridas", df_filtrado['Plataforma'].nunique())
 
