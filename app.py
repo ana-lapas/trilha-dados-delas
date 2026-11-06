@@ -209,8 +209,7 @@ with aba4:
 
         if submit:
             if mensagem: # Validação simples
-                # ATENÇÃO: SUBSTITUA 'SEU_ID_AQUI' PELO ID DO SEU FORMSPREE
-                formspree_url = "https://formspree.io/f/SEU_ID_AQUI"
+                formspree_url = "https://formspree.io/f/xljjvzvl"
                 
                 dados_form = {
                     "Nome": nome if nome else "Anônima",
