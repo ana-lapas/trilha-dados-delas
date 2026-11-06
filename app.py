@@ -107,8 +107,15 @@ col3.metric("Opções de Carreira", "2")
 # --- GRÁFICO ---
 st.markdown("### Distribuição por Plataforma")
 if not df_filtrado.empty:
-    contagem = df_filtrado['Plataforma'].value_counts()
-    st.bar_chart(contagem, color="#E5989B", height=200) 
+    # Usando Altair para criar um gráfico de barras horizontal
+    import altair as alt
+    
+    chart = alt.Chart(df_filtrado).mark_bar(color="#E5989B").encode(
+        x=alt.X('count()', title='Quantidade de Recursos'),
+        y=alt.Y('Plataforma', sort='-x', title='') # O sort='-x' ordena da maior para a menor
+    ).properties(height=250)
+    
+    st.altair_chart(chart, use_container_width=True)
 else:
     st.warning("Ops! Nenhum recurso encontrado. Tente mudar os filtros na barra lateral.")
 
